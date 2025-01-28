@@ -10,7 +10,7 @@ public class ThreadInvio implements Runnable {
     private PrintWriter out;
 
     public ThreadInvio(Socket socket) throws IOException {
-        sc = new Scanner(socket.getInputStream());
+        sc = new Scanner(System.in);
         out = new PrintWriter(socket.getOutputStream());
     }
 
@@ -23,6 +23,13 @@ public class ThreadInvio implements Runnable {
         while (!Thread.interrupted()) {
             if (primo) {
                 System.out.println("Dammi il nome utente");
+            }
+            message = sc.nextLine();
+            out.println(message);
+            out.flush();
+            if (primo) {
+                System.out.println("Utente aquisito, scrivi messaggio");
+                primo = false;
             }
         }
     }
