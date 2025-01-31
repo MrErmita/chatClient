@@ -51,7 +51,7 @@ while (true) {
 ---
 
 ## 📷 Screenshot
-![Demo](https://via.placeholder.com/800x400?text=Demo+ChatClient)
+![Demo](images/image.png)
 
 ---
 
