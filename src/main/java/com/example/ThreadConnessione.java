@@ -35,7 +35,7 @@ public class ThreadConnessione implements Runnable {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Connessione interrotta con" + nomeClient);
+            System.out.println("Connessione interrotta con " + nomeClient);
         }
     }
 }
