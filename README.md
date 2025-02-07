@@ -4,7 +4,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/MrErmita/chatClient?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/MrErmita/chatClient?style=for-the-badge)
 
-Un semplice client di chat basato su **Java**, utilizzando **socket TCP** e **thread** per la comunicazione in tempo reale tra più utenti. Perfetto per esplorare il networking in Java! 🚀
+Un semplice client di chat basato su **Java**, utilizzando **socket TCP** e **thread** per la comunicazione in tempo reale tra più utenti. Perfetto per esplorare il networking in Java! 🚀 Ora con **interfaccia grafica (GUI)** grazie a **JFrame**! 🎨
 
 ---
 
@@ -13,6 +13,7 @@ Un semplice client di chat basato su **Java**, utilizzando **socket TCP** e **th
 ✅ Invio e ricezione di messaggi in tempo reale
 ✅ Supporto per più utenti
 ✅ Implementazione basata su **Java Threads** per la gestione delle connessioni
+✅ **Interfaccia grafica con JFrame** per un'esperienza utente migliorata
 
 ---
 
@@ -48,6 +49,14 @@ while (true) {
 }
 ```
 
+Ora il client include un'interfaccia grafica basata su **JFrame**, migliorando la facilità d'uso:
+```java
+JFrame frame = new JFrame("Chat Client");
+JTextArea chatArea = new JTextArea();
+JTextField messageField = new JTextField();
+JButton sendButton = new JButton("Invia");
+```
+
 ---
 
 ## 📷 Screenshot
@@ -59,6 +68,7 @@ while (true) {
 - Java ☕
 - Socket TCP/IP 📡
 - Multi-threading 🧵
+- **JFrame per la GUI** 🎨
 
 ---
 
@@ -82,3 +92,4 @@ Questo progetto è distribuito sotto licenza MIT. 📄
 🐙 GitHub: [MrErmita](https://github.com/MrErmita)
 
 💡 **Star il repository se ti è piaciuto! ⭐**
+
