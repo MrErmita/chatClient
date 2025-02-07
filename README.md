@@ -51,7 +51,7 @@ while (true) {
 ---
 
 ## 📷 Screenshot
-![Demo](https://via.placeholder.com/800x400?text=Demo+ChatClient)
+![Demo](images/image.png)
 
 ---
 
@@ -78,7 +78,7 @@ Questo progetto è distribuito sotto licenza MIT. 📄
 ---
 
 ## 📬 Contatti
-📧 Email: [mrermita@example.com](mailto:mrermita@example.com)
+📧 Email: [alessio.bragetti@gmail.com](mailto:alessio.bragetti@gmail.com)
 🐙 GitHub: [MrErmita](https://github.com/MrErmita)
 
 💡 **Star il repository se ti è piaciuto! ⭐**
