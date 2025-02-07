@@ -41,18 +41,19 @@ public class ClientMain {
             out = new PrintWriter(clientSocket.getOutputStream(), true);
             
             username = JOptionPane.showInputDialog(frame, "Inserisci il tuo nome utente:");
+            frame.setTitle(username);
             if (username != null && !username.trim().isEmpty()) {
                 out.println(username);
                 chatArea.append("Nome utente impostato: " + username + "\n");
             }
             
-            Thread riceviThread = new Thread(new ThreadRicevi(clientSocket));
+            Thread riceviThread = new Thread(new ThreadRicevi(clientSocket, chatArea));
             riceviThread.start();
             
             ActionListener sendAction = e -> {
                 String message = inputField.getText().trim();
                 if (!message.isEmpty()) {
-                    out.println(username + ": " + message);
+                    out.println(message);
                     chatArea.append("Tu: " + message + "\n");
                     inputField.setText("");
                 }

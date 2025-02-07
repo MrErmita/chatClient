@@ -4,14 +4,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
+import javax.swing.JTextArea;
+import javax.swing.SwingUtilities;
 
-public class ThreadRicevi implements Runnable{
+public class ThreadRicevi implements Runnable {
     private Socket socket;
-    BufferedReader in;
+    private BufferedReader in;
+    private JTextArea chatArea;
 
-    public ThreadRicevi(Socket socket) throws IOException {
+    public ThreadRicevi(Socket socket, JTextArea chatArea) throws IOException {
         this.socket = socket;
-        in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        this.in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        this.chatArea = chatArea;
     }
 
     @Override
@@ -19,18 +23,14 @@ public class ThreadRicevi implements Runnable{
         String messaggio;
 
         try {
-            messaggio = in.readLine();
-
-            while(messaggio != null) {
-                System.out.println(messaggio);
-                messaggio = in.readLine();
+            while ((messaggio = in.readLine()) != null) {
+                String finalMessaggio = messaggio;
+                SwingUtilities.invokeLater(() -> chatArea.append(finalMessaggio + "\n"));
             }
-            System.out.println("Serveri Chiuso");
+            SwingUtilities.invokeLater(() -> chatArea.append("Server Chiuso\n"));
             socket.close();
         } catch (IOException e) {
-            System.out.println("Errore di connessione");
+            SwingUtilities.invokeLater(() -> chatArea.append("Errore di connessione\n"));
         }
-
     }
-    
 }
