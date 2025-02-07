@@ -1,4 +1,4 @@
-package com.example;
+package com.example.Server;
 
 import java.io.IOException;
 import java.io.PrintWriter;
