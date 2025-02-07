@@ -26,13 +26,13 @@ Un semplice client di chat basato su **Java**, utilizzando **socket TCP** e **th
 ```
 2. **Compila ed esegui il server**
 ```bash
-javac -d bin src/com/example/MainServer.java
-java -cp bin com.example.MainServer
+javac -d bin src/com/example/Server/MainServer.java
+java -cp bin com.example.Server.MainServer
 ```
 3. **Compila ed esegui il client**
 ```bash
-javac -d bin src/com/example/MainClient.java
-java -cp bin com.example.MainClient
+javac -d bin src/com/example/Client/MainClient.java
+java -cp bin com.example.Client.MainClient
 ```
 
 ---
