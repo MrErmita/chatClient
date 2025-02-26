@@ -1,5 +1,5 @@
 # 🗨️ ChatClient
-
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![GitHub repo size](https://img.shields.io/github/repo-size/MrErmita/chatClient?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/MrErmita/chatClient?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/MrErmita/chatClient?style=for-the-badge)
